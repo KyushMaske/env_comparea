@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #3c404b;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1, p {
+    text-align: center;
+}
+
+h1 {
+    color: #61dafb;
+}
+
+p {
+    color: #a8dadc;
+    margin-bottom: 30px;
+}
+
+.comparer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.comparison-set {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comparer-box, .diff-output-box {
+    background-color: #2f333a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #a8dadc;
+    margin: 0;
+}
+
+.sort-btn, #add-box-btn {
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.sort-btn:hover, #add-box-btn:hover {
+    background-color: #52c5e7;
+}
+
+#add-box-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 250px;
+    padding: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #1e2126;
+    color: #e0e0e0;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 14px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #61dafb;
+    box-shadow: 0 0 0 3px rgba(97, 218, 251, 0.3);
+}
+
+.diff-display {
+    min-height: 250px;
+    padding: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #1e2126;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-x: auto;
+}
+
+/* Diff highlighting styles */
+.added {
+    background-color: rgba(76, 175, 80, 0.3);
+    display: block;
+}
+
+.removed {
+    background-color: rgba(244, 67, 54, 0.3);
+    text-decoration: line-through;
+    display: block;
+}
+
+.unchanged {
+    color: #999;
+    display: block;
+}

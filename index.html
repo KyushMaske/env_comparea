@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Content Comparer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Real-time Content Comparer</h1>
+        <p>Ideal for comparing .env files. Use the sort button for easier comparison.</p>
+        
+        <div id="comparison-container" class="comparer-grid">
+            <!-- Initial Source Box -->
+            <div class="comparison-set">
+                <div class="comparer-box">
+                    <div class="box-header">
+                        <h2>Source A</h2>
+                        <button class="sort-btn" data-target="content-0">Sort</button>
+                    </div>
+                    <textarea id="content-0" class="content-input" placeholder="Enter content for Source A..."></textarea>
+                </div>
+                <div class="diff-output-box">
+                    <h2>Differences</h2>
+                    <pre id="diff-0" class="diff-display"></pre>
+                </div>
+            </div>
+
+            <!-- Second Box for initial comparison -->
+            <div class="comparison-set">
+                <div class="comparer-box">
+                    <div class="box-header">
+                        <h2>Compare to B</h2>
+                        <button class="sort-btn" data-target="content-1">Sort</button>
+                    </div>
+                    <textarea id="content-1" class="content-input" placeholder="Enter content to compare..."></textarea>
+                </div>
+                <div class="diff-output-box">
+                    <h2>Differences</h2>
+                    <pre id="diff-1" class="diff-display"></pre>
+                </div>
+            </div>
+        </div>
+        
+        <button id="add-box-btn">Add Another Comparison Box</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
